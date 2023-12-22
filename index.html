@@ -3,36 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Activity 3</title>
 </head>
 <body>
-    <h1>Demo: JavaScript Object</h1>
-    <p id ="p1"></p>
-    <p id ="p2"></p>
-    <p id ="p3"></p>
-    <p id ="p4"></p>
-    <p id ="p5"></p>
-
     <script>
-        var person = new Object();
 
-        person.firstName = " Julie";
-        person["lastName"] = "Ann";
-        person.age = 27;
-        person.getFullName = function (){
-            return this.firstName + ' ' + this.lastName;
+        var person = {
+          name: "Crisitomo",
+          lastname: "Ibarra",
+          city: "Manila",
+          occupation: "Developer"
         };
 
+        var information = "Name: " + person.name + "\nLastname: " + person.lastname +"\ncity: " + person.city + "\nOccupation: " + person.occupation;
+        alert(information);
 
-        document.getElementById("p1").innerHTML = person.firstName;
-        document.getElementById("p2").innerHTML = person.lastName;
 
-        document.getElementById("p3").innerHTML = person["firstName"];
-        document.getElementById("p4").innerHTML = person["lastName"];
+        var person = {
+            Name: "Jose",
+            Age: 60
+        };
 
-        document.getElementById("p5").innerHTML = person.getFullName();
-    </script>
-
+        alert (person.Name + " is " + person.Age)
+      </script>
     
 </body>
 </html>
