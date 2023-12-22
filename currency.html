@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label>Peso</label>
+    <input type="text" placeholder="0.00" id="amount">
+    <select id="currency">
+        <option value="usd">USD</option>
+        <option value="eur">EUR</option>
+    </select>
+    <button onclick="convertCurrency()">Convert</button>
+
+    <p id="result"></p>
+
+    <script>
+         function convertCurrency() {
+            let amount = parseFloat(document.getElementById("amount").value);
+            let currency = document.getElementById("currency").value;
+            let convertrate = {
+                usd: 0.018,
+                eur: 0.016,
+            };
+
+            let convertedAmount = amount * convertrate [currency];
+
+            document.getElementById("result").innerHTML = ("Converted Amount: " + convertedAmount);
+        }
+    </script>
+</body>
+</html>
